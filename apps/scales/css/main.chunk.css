@@ -1,0 +1,1517 @@
+.selector-wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column
+}
+
+.selector-wrap .selector-chord-name {
+    display: flex;
+    align-items: center;
+    color: #FFac51;
+    font-size: 4rem;
+    height: 45px
+}
+
+.selector-wrap .selector-chord-name.notes-finder {
+    padding-bottom: 50px
+}
+
+.selector-wrap .selector-chord-name.notes-finder > span {
+    display: flex;
+    align-items: baseline
+}
+
+.selector-wrap .selector-interval-name {
+    display: flex;
+    align-items: flex-start;
+    color: #FFac51;
+    font-size: 40px;
+    height: 45px;
+    padding-top: 10px
+}
+
+.selector-wrap .selector-altered {
+    font-family: Opus Chords Std;
+    height: 100%;
+    padding-top: 10px
+}
+
+.\--accidentals.double-sharp {
+    display: flex;
+    align-self: flex-end
+}
+
+.selector-wrap .selector-minor {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 3rem
+}
+
+.selector-wrap .selector-chord-name .selector-interval {
+    font-size: 2.5rem;
+    height: 100%;
+    display: flex
+}
+
+.\--root-note {
+    font-size: 40px
+}
+
+.\--accidentals, .\--accidentals-circle {
+    font-family: Opus Chords Std
+}
+
+.\--accidentals-circle {
+    font-style: normal;
+    padding-top: 3px
+}
+
+.selector {
+    display: flex;
+    text-align: left
+}
+
+.selector div {
+    cursor: pointer;
+}
+
+.select {
+    width: 80px;
+    z-index: 10;
+    margin: 0 .18rem;
+    font-family: Opus Chords Std;
+    font-size: 18px;
+    text-align: center
+}
+
+.select .css-151xaom-placeholder, .select .css-dvua67-singleValue {
+    top: 15px
+}
+
+.select-chord {
+    width: 80px;
+    z-index: 11
+}
+
+.select-interval {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    z-index: 9
+}
+
+.selector-wrap .selector-interval .sign-maj {
+    line-height: .7
+}
+
+.selector-wrap .selector-interval .sign-dim {
+    margin-top: -6px
+}
+
+.selector-wrap .selector-interval .sign-spacing {
+    letter-spacing: -6px;
+    margin-left: -3px
+}
+
+.chord-notes {
+    position: relative
+}
+
+.chord-notes .notes > span {
+    color: #888
+}
+
+.notes {
+    list-style: none;
+    color: #fff;
+    cursor: pointer
+}
+
+.notes, .notes li {
+    display: flex;
+    align-items: center
+}
+
+.notes li {
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 .1rem;
+    background-color: #FFac51;
+    font-size: 14px;
+    font-family: Open Sans, sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: 400
+}
+
+.notes li, .notes li.active {
+    transition: background-color .3s
+}
+
+.notes li.active {
+    background-color: #c1c1c1
+}
+
+.notes li:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    background-color: initial
+}
+
+.notes li:hover {
+    background-color: #c1c1c1;
+    transition: background-color .3s
+}
+
+@media screen and (max-width: 520px) {
+    .chord-notes {
+        overflow-x: scroll
+    }
+
+    .chord-notes .notes > span {
+        white-space: nowrap;
+        padding-left: 1rem
+    }
+
+    .chord-notes .notes {
+        width: 150%
+    }
+}
+
+.buttons-module {
+    display: flex;
+    justify-content: center
+}
+
+.buttons {
+    z-index: 8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 75px;
+    margin: 20px 0 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+button {
+    font-size: 12px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    color: #000;
+    transition: .25s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-right: 8px;
+    padding: 7px 14px
+}
+
+button.active {
+    background-color: #e4e4e4;
+    border-color: #dadada
+}
+
+button:hover {
+    border-color: #dadada;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+}
+
+.drop-down {
+    position: relative
+}
+
+.drop-down ul {
+    font-size: 12px;
+    font-family: Open Sans, sans-serif;
+    min-width: 90px;
+    position: absolute;
+    display: none;
+    z-index: 11;
+    top: 30px;
+    left: 1px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2)
+}
+
+.drop-down ul.active {
+    display: block
+}
+
+.drop-down ul li:first-child {
+    border-radius: 4px 4px 0 0
+}
+
+.drop-down ul li:last-child {
+    border-radius: 0 0 4px 4px
+}
+
+.drop-down ul li {
+    padding: 10px 8px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap
+}
+
+.drop-down ul li:hover {
+    background-color: #e1e1e1
+}
+
+.drop-down ul li.active {
+    background-color: #eee
+}
+
+@media (max-width: 991px) {
+    .buttons {
+        width: 750px;
+        padding: 0 30px
+    }
+}
+
+.strings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    height: 220px;
+    width: 93%;
+    background: #f3f3f3
+}
+
+.strings li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center
+}
+
+.strings li .string-left {
+    background-color: #ba9;
+    margin-left: 2rem;
+    flex-grow: 8
+}
+
+.strings li .string-right {
+    transform-origin: 0;
+    background-color: #ba9;
+    flex-grow: 4
+}
+
+.strings li span {
+    display: flex;
+    height: 3px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1);
+    background-image: repeating-linear-gradient(50deg, rgba(0, 0, 0, .6), transparent .15em, transparent .2em), linear-gradient(180deg, rgba(0, 0, 0, .1) 10%, hsla(0, 0%, 100%, .25) 15%, hsla(0, 0%, 100%, .8) 30%, hsla(0, 0%, 100%, .25) 45%, rgba(0, 0, 0, .6) 90%)
+}
+
+.strings li:first-child span, .strings li:nth-child(2) span, .strings li:nth-child(3) span {
+    height: 3px
+}
+
+.strings li:nth-child(4) span {
+    height: 4px
+}
+
+.strings li:nth-child(5) span {
+    height: 5px
+}
+
+.strings li:nth-child(6) span {
+    height: 6px
+}
+
+@media screen and (max-width: 992px) {
+    .strings {
+        width: 92%
+    }
+
+    .strings li .string-left {
+        margin-left: 1rem
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .strings {
+        width: 90%
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .strings {
+        width: 95%
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .strings {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .strings {
+        width: 110%;
+        left: -15px
+    }
+}
+
+.Guitar {
+    width: 100%
+}
+
+.Guitar, .guitar-neck-wrap {
+    position: relative;
+    overflow: hidden
+}
+
+.guitar-neck-wrap {
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: 50px;
+    height: 240px;
+    font-family: Opus Chords Std
+}
+
+.headstock-wrap {
+    position: absolute;
+    width: 75px;
+    top: 0;
+    margin-left: -75px
+}
+
+.headstock-wrap .headstock:before, .headstock:after {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    content: "";
+    left: -30px
+}
+
+.headstock-wrap .headstock:after {
+    top: 223px
+}
+
+.headstock-wrap .headstock {
+    position: relative;
+    height: 240px;
+    box-shadow: inset -10px 0 30px rgba(92, 58, 12, .3);
+    background-image: url(../../img/maple-lg.jpg);
+    background-size: cover
+}
+
+.headstock-wrap .headstock .headstock-string-E {
+    height: 3px;
+    top: 1.83rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock .headstock-string-h {
+    height: 3px;
+    top: 4.1rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock .headstock-string-g {
+    height: 3px;
+    top: 6.39rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock .headstock-string-d {
+    height: 4px;
+    top: 8.7rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock .headstock-string-a {
+    height: 5px;
+    top: 10.9rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock .headstock-string-e {
+    height: 6px;
+    top: 13.18rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.headstock-wrap .headstock:before {
+    left: -30px;
+    top: -189px
+}
+
+.headstock-wrap .headstock:after, .headstock-wrap .headstock:before {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    content: ""
+}
+
+.headstock-wrap .headstock:after {
+    left: -35px;
+    top: 231px
+}
+
+.Guitar .headstock ul li {
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    background-color: #ba9;
+    background-image: repeating-linear-gradient(50deg, rgba(0, 0, 0, .6), transparent .15em, transparent .2em), linear-gradient(180deg, rgba(0, 0, 0, .3) 10%, hsla(0, 0%, 100%, .25) 15%, hsla(0, 0%, 100%, .8) 30%, hsla(0, 0%, 100%, .25) 45%, rgba(0, 0, 0, .6) 90%)
+}
+
+.guitar-neck-wrap > div {
+    margin-top: 11px;
+    box-shadow: inset 10px 1px 10px -3px rgba(0, 0, 0, .75), inset 10px -1px 10px -3px rgba(0, 0, 0, .75);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    padding-left: 75px;
+    height: 220px;
+    width: 100%;
+    overflow: hidden
+}
+
+.guitar-neck-wrap ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%
+}
+
+.guitar-neck-wrap li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative
+}
+
+.guitar-neck-wrap .headstock .headstock-string {
+    cursor: default
+}
+
+.guitar-neck-wrap li:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #8f8f8f, #454545)
+}
+
+.guitar-neck-wrap li:first-of-type {
+    position: relative;
+    border-right: none
+}
+
+.guitar-neck-wrap li:first-of-type:after, .guitar-neck-wrap li:last-of-type:after {
+    border: none
+}
+
+.guitar-neck-wrap li:first-of-type:before {
+    content: "";
+    background-image: url(../../img/gdae.jpg);
+    opacity: .8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2
+}
+
+.guitar-neck-wrap li > span {
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: #FFac51;
+    color: #2f2f2f;
+    border-radius: 50%;
+    text-align: center;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .75);
+    transition: background-color .3s;
+    opacity: 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2
+}
+
+.guitar-neck-wrap li span.open-string-note {
+    background: 0 0;
+    box-shadow: none;
+    font-size: 20px;
+    width: 100%
+}
+
+.guitar-neck-wrap li span.marked, .guitar-neck-wrap li span.open-string-note {
+    opacity: 1;
+    color: #fff;
+    font-family: Open Sans, sans-serif
+}
+
+.guitar-neck-wrap li span.marked svg {
+    margin-bottom: 1px
+}
+
+.guitar-neck-wrap li span.active, .guitar-neck-wrap li span.marked:hover {
+    background-color: #c1c1c1;
+    transition: background-color .3s
+}
+
+.guitar-neck-wrap li .\--accidentals-circle {
+    font-family: Opus Chords Std;
+    font-style: normal;
+    color: #fff;
+    opacity: 1
+}
+
+.guitar-neck-wrap .dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #767068;
+    position: absolute;
+    top: 27px
+}
+
+.guitar-neck-wrap .headstock li:first-of-type:before {
+    content: none
+}
+
+@media screen and (max-width: 992px) {
+    .guitar-neck-wrap > ul {
+        padding-left: 130px;
+        width: 100%
+    }
+
+    .headstock-wrap {
+        width: 130px;
+        margin-left: -130px
+    }
+
+    .headstock-wrap .headstock .headstock-string {
+        width: 160px
+    }
+
+    .headstock-wrap .headstock .headstock-string-E {
+        height: 3px;
+        top: 1.81rem
+    }
+
+    .headstock-wrap .headstock .headstock-string-h {
+        height: 3px;
+        top: 4.08rem
+    }
+
+    .headstock-wrap .headstock .headstock-string-g {
+        height: 3px;
+        top: 102px
+    }
+
+    .headstock-wrap .headstock .headstock-string-d {
+        height: 4px;
+        top: 138px;
+        z-index: 2
+    }
+
+    .headstock-wrap .headstock .headstock-string-a {
+        height: 5px;
+        top: 174.5px;
+        z-index: 2
+    }
+
+    .headstock-wrap .headstock .headstock-string-e {
+        height: 6px;
+        top: 211px
+    }
+
+    .headstock-wrap .headstock:before {
+        width: 200px;
+        height: 200px;
+        left: 20px;
+        top: -188px
+    }
+
+    .headstock-wrap .headstock:after {
+        width: 200px;
+        height: 200px;
+        left: 20px;
+        top: 230px
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .guitar-neck-wrap {
+        display: block;
+        overflow-x: scroll
+    }
+
+    .guitar-neck-wrap .guitar-neck {
+        padding-left: 30px;
+        min-width: 800px;
+        box-shadow: inset -1px 0 4px 0 rgba(0, 0, 0, .75)
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+        background: 0 0;
+        display: none
+    }
+
+    .headstock-wrap .headstock:before {
+        width: 200px;
+        height: 200px;
+        left: 25px;
+        top: -189px
+    }
+
+    .headstock-wrap .headstock:after {
+        width: 200px;
+        height: 200px;
+        left: 35px;
+        top: 231px
+    }
+}
+
+.piano-wrapper {
+    width: 100%
+}
+
+.piano-wrapper ul {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    min-width: 750px;
+    width: 100%
+}
+
+.piano {
+    display: flex
+}
+
+.key {
+    display: inline-flex;
+    flex-grow: 1;
+    position: relative;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Opus Chords Std
+}
+
+.key span {
+    justify-content: flex-end;
+    flex-direction: column
+}
+
+.key span, .key span i {
+    display: flex;
+    align-items: center
+}
+
+.key span i {
+    justify-content: center;
+    font-style: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    margin-bottom: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    color: #000
+}
+
+.key .white-key {
+    background: #fff;
+    border-top: 1px solid rgba(32, 32, 32, .2);
+    border-right: 1px solid rgba(32, 32, 32, .3);
+    border-bottom: 1px solid rgba(32, 32, 32, .3);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 1px rgba(32, 32, 32, .2);
+    width: 100%;
+    height: 190px
+}
+
+.key .white-key, .key .white-key.active {
+    transition: background-color .05s ease, box-shadow .05s ease
+}
+
+.key .white-key.active {
+    background: #d8d8d8;
+    position: relative;
+    top: 5px;
+    box-shadow: 0 0 0 transparent
+}
+
+.key .white-key .active .black-key {
+    top: -10px
+}
+
+.key .white-key .marked {
+    background-color: #FFac51;
+    color: #000;
+    box-shadow: inset -1px -3px 4px rgba(32, 32, 32, .3);
+    transition: background-color .3s
+}
+
+.key .white-key .active, .key .white-key .marked:hover {
+    background-color: #c1c1c1;
+    box-shadow: none;
+    transition: background-color .3s
+}
+
+.key .black-key {
+    content: "";
+    box-shadow: inset 0 -1px 2px hsla(0, 0%, 100%, .4), 0 2px 3px rgba(0, 0, 0, .4);
+    background: linear-gradient(-20deg, #222, #000, #222);
+    background: #111;
+    transition: background-color .05s ease, box-shadow .05s ease;
+    box-shadow: 0 5px 1px rgba(32, 32, 32, .2);
+    border-radius: 0 0 5px 5px;
+    border-color: #666 #222 #111 #555;
+    border-style: solid;
+    border-width: 1px;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    right: -40%;
+    width: 80%;
+    z-index: 10
+}
+
+.key .black-key.active {
+    box-shadow: 0 1px 1px rgba(32, 32, 32, .1);
+    border-bottom-width: 3px;
+    height: 110px;
+    top: 5px
+}
+
+.key .black-key i {
+    color: #fff;
+    font-size: 10px;
+    left: 0;
+    font-weight: 600;
+    line-height: .8rem
+}
+
+.key .black-key .marked {
+    background-color: #FFac51;
+    color: #000;
+    box-shadow: inset 3px 3px 4px hsla(0, 0%, 100%, .3);
+    transition: background-color .3s
+}
+
+.key .black-key .active, .key .black-key .marked:hover {
+    background-color: #c1c1c1;
+    box-shadow: none;
+    transition: background-color .3s
+}
+
+.key:first-child .white-key {
+    border-left: none;
+    border-radius: 0 0 5px 0
+}
+
+.key:last-child .white-key {
+    border-right: transparent;
+    border-radius: 0 0 0 5px
+}
+
+.key:first-child .white-key.active, .key:last-child .white-key.active {
+    box-shadow: 0 0 0 transparent
+}
+
+.hide--tablet {
+    display: none
+}
+
+.hideNotes {
+    width: 124px
+}
+
+@media (max-width: 767px) {
+    .piano-wrapper {
+        width: 100%;
+        overflow-y: scroll
+    }
+
+    .piano-wrapper::-webkit-scrollbar {
+        width: 0;
+        background: 0 0;
+        display: none
+    }
+
+    .piano {
+        width: 750px;
+        height: 185px
+    }
+
+    .key span i {
+        margin-bottom: 10px;
+        width: 18px;
+        height: 18px
+    }
+
+    .key .black-key {
+        height: 100px;
+        width: 75%
+    }
+
+    .key .black-key.active {
+        top: 5px;
+        height: 100px
+    }
+
+    .key .white-key {
+        height: 180px
+    }
+
+    .key .white-key.active {
+        top: 5px
+    }
+
+    .tools__page__content {
+        padding: 0 15px;
+        margin-top: 2rem
+    }
+
+    .article-info, .btn-group, .default__page__title {
+        padding: 0 15px
+    }
+}
+
+@media (max-width: 480px) {
+    .key .white-key.active {
+        height: 180px;
+        top: 5px
+    }
+}
+
+.ukuleleStrings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 1.3rem;
+    right: 0;
+    height: 175px;
+    width: 93%;
+    background: #f3f3f3
+}
+
+.ukuleleStrings li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center
+}
+
+.ukuleleStrings li .string-left {
+    background-color: #ffffdf;
+    margin-left: 2rem;
+    flex-grow: 11;
+    opacity: .8
+}
+
+.ukuleleStrings li .string-right {
+    transform-origin: 0;
+    background-color: #ffffdf;
+    flex-grow: 1;
+    opacity: .8
+}
+
+@-webkit-keyframes shake_string {
+    10% {
+        transform: rotate(.3deg)
+    }
+    20% {
+        transform: rotate(-.3deg)
+    }
+    30% {
+        transform: rotate(.2deg)
+    }
+    40% {
+        transform: rotate(-.2deg)
+    }
+    60% {
+        transform: rotate(.15deg)
+    }
+    70% {
+        transform: rotate(-.15deg)
+    }
+    80% {
+        transform: rotate(.05deg)
+    }
+    90% {
+        transform: rotate(-.05deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes shake_string {
+    10% {
+        transform: rotate(.3deg)
+    }
+    20% {
+        transform: rotate(-.3deg)
+    }
+    30% {
+        transform: rotate(.2deg)
+    }
+    40% {
+        transform: rotate(-.2deg)
+    }
+    60% {
+        transform: rotate(.15deg)
+    }
+    70% {
+        transform: rotate(-.15deg)
+    }
+    80% {
+        transform: rotate(.05deg)
+    }
+    90% {
+        transform: rotate(-.05deg)
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+.ukuleleStrings li span {
+    display: flex;
+    height: 4px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1);
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, .6), transparent .15em, transparent .2em)
+}
+
+@media screen and (max-width: 992px) {
+    .ukuleleStrings {
+        width: 92%
+    }
+
+    .ukuleleStrings li .string-left {
+        margin-left: 1rem
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ukuleleStrings {
+        width: 90%
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ukuleleStrings {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .ukuleleStrings {
+        width: 95%
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .ukuleleStrings {
+        width: 110%;
+        left: -15px
+    }
+}
+
+.ukuleleGuitar {
+    width: 100%;
+    position: relative;
+    overflow: hidden
+}
+
+.ukulele-neck-wrap {
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: 50px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    font-family: Opus Chords Std
+}
+
+.ukulele-headstock-wrap {
+    position: absolute;
+    width: 75px;
+    top: 0;
+    margin-left: -75px
+}
+
+.ukulele-headstock-wrap .headstock {
+    position: relative;
+    height: 200px;
+    box-shadow: inset -10px 0 30px rgba(92, 58, 12, .3);
+    background-image: url(../../img/maple-lg.jpg);
+    background-size: cover
+}
+
+.ukulele-headstock-wrap .headstock .headstock-string-a {
+    height: 4px;
+    top: 2.05rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.ukulele-headstock-wrap .headstock .headstock-string-e {
+    height: 5px;
+    top: 4.75rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.ukulele-headstock-wrap .headstock .headstock-string-c {
+    height: 5px;
+    top: 7.5rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.ukulele-headstock-wrap .headstock .headstock-string-g {
+    height: 4px;
+    top: 10.25rem;
+    width: 95px;
+    box-shadow: .04em .37em .02em 0 rgba(0, 0, 0, .1)
+}
+
+.ukulele-headstock-wrap .headstock:after, .ukulele-headstock-wrap .headstock:before {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    left: -34px;
+    background: #fff
+}
+
+.ukulele-headstock-wrap .headstock:before {
+    top: -187px
+}
+
+.ukulele-headstock-wrap .headstock:after {
+    top: 188px
+}
+
+.ukulele-headstock-wrap .headstock ul li {
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    background-color: #ffffdf;
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, .6), transparent .15em, transparent .2em)
+}
+
+.ukulele-headstock-wrap .headstock .headstock-string {
+    cursor: default
+}
+
+.ukulele-neck-wrap > div {
+    margin-top: .8rem;
+    box-shadow: inset 10px 1px 10px -3px rgba(0, 0, 0, .75), inset 10px -1px 10px -3px rgba(0, 0, 0, .75);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    padding-left: 75px;
+    height: 175px;
+    width: 100%
+}
+
+.ukulele-neck-wrap ul {
+    display: flex;
+    justify-content: space-around;
+    height: 100%
+}
+
+.ukulele-neck-wrap li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative
+}
+
+.ukulele-neck-wrap li:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, #8f8f8f, #454545)
+}
+
+.ukulele-neck-wrap li:first-of-type {
+    position: relative;
+    border-right: none
+}
+
+.ukulele-neck-wrap li:first-of-type:after, .ukulele-neck-wrap li:last-of-type:after {
+    border: none
+}
+
+.ukulele-neck-wrap li:first-of-type:before {
+    content: "";
+    background-image: url(../../img/gdae.jpg);
+    opacity: .8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 2
+}
+
+.ukulele-neck-wrap .headstock li:first-of-type:before {
+    content: none
+}
+
+.ukulele-neck-wrap li > span {
+    width: 30px;
+    height: 30px;
+    background: #FFac51;
+    color: #2f2f2f;
+    border-radius: 50%;
+    text-align: center;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 30px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .75);
+    transition: background-color .3s;
+    opacity: 0;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2
+}
+
+.ukulele-neck-wrap li span.open-string-note {
+    background: 0 0;
+    box-shadow: none;
+    font-size: 20px;
+    width: 100%
+}
+
+.ukulele-neck-wrap li span.marked, .ukulele-neck-wrap li span.open-string-note {
+    opacity: 1;
+    color: #fff;
+    font-family: Open Sans, sans-serif
+}
+
+.ukulele-neck-wrap li span.marked svg {
+    margin-bottom: 1px
+}
+
+.ukulele-neck-wrap li span.active, .ukulele-neck-wrap li span.marked:hover {
+    background-color: #c1c1c1;
+    transition: background-color .3s
+}
+
+.ukulele-neck-wrap li .\--accidentals-circle {
+    font-family: Opus Chords Std;
+    font-style: normal;
+    color: #fff;
+    opacity: 1
+}
+
+.ukulele-neck-wrap .dots {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #767068;
+    position: absolute;
+    top: 33px
+}
+
+.ukulele-neck-wrap li .guitar-accidental {
+    font-family: Opus Chords Std;
+    font-style: normal;
+    color: #fff
+}
+
+@media screen and (max-width: 992px) {
+    .ukulele-headstock-wrap {
+        width: 130px;
+        margin-left: -130px;
+        top: 0
+    }
+
+    .ukulele-headstock-wrap .headstock .headstock-string {
+        width: 160px
+    }
+
+    .ukulele-headstock-wrap .headstock .headstock-string-a {
+        height: 5px;
+        top: 33px;
+        z-index: 2
+    }
+
+    .ukulele-headstock-wrap .headstock .headstock-string-e {
+        height: 4px;
+        top: 76px
+    }
+
+    .ukulele-headstock-wrap .headstock .headstock-string-c {
+        height: 4px;
+        top: 120px
+    }
+
+    .ukulele-headstock-wrap .headstock .headstock-string-g {
+        height: 5px;
+        top: 164px;
+        z-index: 2
+    }
+
+    .ukulele-headstock-wrap .headstock:before {
+        width: 200px;
+        height: 200px;
+        left: 30px;
+        top: -187px
+    }
+
+    .ukulele-headstock-wrap .headstock:after {
+        width: 200px;
+        height: 200px;
+        left: 25px;
+        top: 188px
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .ukulele-neck-wrap {
+        display: block;
+        width: 100%;
+        overflow-x: scroll
+    }
+
+    .ukulele-neck-wrap .ukulele-neck {
+        padding-left: 30px;
+        min-width: 800px;
+        height: 170px;
+        box-shadow: inset -1px 0 4px 0 rgba(0, 0, 0, .75)
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+        background: 0 0;
+        display: none
+    }
+
+    .ukulele-headstock-wrap .headstock:before {
+        width: 200px;
+        height: 200px;
+        left: 30px;
+        top: -187px
+    }
+
+    .ukulele-headstock-wrap .headstock:after {
+        width: 200px;
+        height: 200px;
+        left: 35px;
+        top: 183px
+    }
+}
+
+.notation-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 120px
+}
+
+.notation {
+    width: 100%;
+    height: 250px;
+    transform: scale(1)
+}
+
+.clef {
+    font-size: 80px;
+    font-family: Helsinki Std
+}
+
+.clef, .clef:hover {
+    fill: #000
+}
+
+.notation.scale-finder {
+    position: absolute;
+    left: 50%;
+    transform:  scale(.5) translateX(-100%) translateY(-90%);
+}
+
+.notation.scale-finder .clef {
+    transform: translateX(-75px)
+}
+
+.notation.scale-finder .accidentals {
+    transform: translateX(-60px)
+}
+
+.notation svg {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.notation-notes svg:hover {
+    fill: #c1c1c1
+}
+
+.note-finder {
+    height: 323px;
+    overflow: hidden
+}
+
+.note-finder g {
+    transform: translateY(17px)
+}
+
+.note-finder .clef text {
+    transform: translateY(-4px)
+}
+
+.note-finder .notation {
+    height: 257px;
+    transform: scale(1.25)
+}
+
+@media (max-width: 991px) {
+    .clef {
+        transform: translateX(-20px)
+    }
+
+    .notation.scale-finder .clef {
+        transform: translateX(-95px)
+    }
+
+    .note-finder .clef text {
+        transform: translate(-22px, -4px)
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .notation-wrapper, .note-finder {
+        overflow-x: scroll
+    }
+
+    .notation {
+        width: 750px
+    }
+}
+
+@font-face {
+    font-family: Helsinki Std;
+    src: url(../fonts/HelsinkiStd.otf) format("truetype")
+}
+
+@font-face {
+    font-family: Opus Chords Std;
+    src: url(../fonts/OpusChordsStd.otf) format("truetype")
+}
+
+.chord-selector {
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    width: 100%
+}
+
+.chord-selector.notes-finder {
+    min-height: 137px;
+    align-items: flex-end;
+    padding-bottom: 10px
+}
+
+.default__page__content ul {
+    padding-bottom: 0
+}
+
+@media (min-width: 991px) {
+    .default__content, article.default__content {
+        padding: 15px 0
+    }
+
+    .default__page__title {
+        padding-left: 75px
+    }
+
+    .tools__page__content {
+        padding: 0 75px 30px
+    }
+
+    .article-info {
+        padding-left: 75px
+    }
+}
+
+@media (max-width: 992px) {
+    .contact__content, .content__right .finder, .default__content {
+        max-width: 100%;
+        padding: 30px 0
+    }
+
+    .content__right {
+        padding: 0
+    }
+
+    .tools__page__content {
+        padding: 30px 30px;
+        width: 750px;
+        margin: auto
+    }
+
+    .default__page__title {
+        max-width: 750px;
+        margin: 1rem auto;
+        padding: 0 30px
+    }
+
+    .article-info {
+        max-width: 750px;
+        margin: auto;
+        padding: 0 30px
+    }
+}
+
+@media (min-width: 767px) {
+    .its_setting_page.default__content, article.default__content {
+        padding: 15px 0
+    }
+}
